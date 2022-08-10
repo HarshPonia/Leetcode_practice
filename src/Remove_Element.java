@@ -3,16 +3,15 @@ import java.util.Scanner;
 public class Remove_Element {
     public int removeElement(int[] arr, int val) {
     int n = arr.length;
-    int i =0;
-    for (i =0;i<n;i++){
-        if(arr[i]==val) {
-                n--;
-                for (int j =i;j<n;j++)
-                    arr[j]=arr[j+1];
+    int k = 0;
+    for (int i =0;i<n;i++){
+        if(arr[i]!=val){
+            arr[k++] = arr[i];
         }
+
     }
 
-    return n;
+    return k;
     }
         public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
