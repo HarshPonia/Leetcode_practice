@@ -2,18 +2,18 @@ import java.util.Scanner;
 
 public class Remove_Element {
     public int removeElement(int[] arr, int val) {
-    int n = arr.length;
-    int k = 0;
-    for (int i =0;i<n;i++){
-        if(arr[i]!=val){
-            arr[k++] = arr[i];
+        int n = arr.length;
+        int k = 0;
+        for (int i =0;i<n;i++){
+            if(arr[i]!=val){
+                arr[k++] = arr[i];
+            }
+
         }
 
+        return k;
     }
-
-    return k;
-    }
-        public static void main(String[] args) {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Remove_Element obj = new Remove_Element();
         System.out.println("Enter the size of array : ");
