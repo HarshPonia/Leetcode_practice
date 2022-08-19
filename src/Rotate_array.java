@@ -1,35 +1,24 @@
 import java.util.Scanner;
 
 public class Rotate_array {
-//    public void rotate(int arr[],int n,int k){
-//        int p =1;
-//        while (p<=k){
-//            int last = arr[n-1];
-//            for(int i =n-2;i>=0;i--){
-//                arr[i+1] = arr[i];
-//            }
-//            arr[0] = last;
-//            p++;
-//        }
-//     for(int i =0;i<n;i++){
-//         System.out.print(arr[i] + " ");
-//     }
-//    }
+    void swap(int arr[],int start,int end)
+    {
+        int t = arr[start];
+        arr[start++] = arr[end];
+        arr[end--] = t;
+    }
+    public void rotate(int nums[],int k){
+        int n =nums.length;
+        swap(nums,n-k,n-1);
+        swap(nums,0,n-k-1);
+        swap(nums,0,n-1);
 
-    public void rotate(int arr[],int n,int k){
-        int temp[] = new int[n];
-        int j = 0;
-        for(int i =n-k;i<n;i++){
-            temp[j]=arr[i];
-            j++;
-        }
-        for(int i =0;i<n-k;i++){
-            temp[j] = arr[i];
-            j++;
-        }
-        for(int i =0;i<n;i++){
-         System.out.print(temp[i] + " ");
-     }
+/*
+        swap(nums,0,n-1);
+        swap(nums,0,k-1);
+        swap(nums,k,n-1);
+ */
+
     }
     public static void main(String[] args) {
         Rotate_array obj = new Rotate_array();
@@ -43,6 +32,6 @@ public class Rotate_array {
         }
         System.out.println("Enter the number to rotate the array :");
         int k = sc.nextInt();
-        obj.rotate(arr,n,k);
+        obj.rotate(arr,k);
     }
 }
