@@ -1,3 +1,16 @@
+/*
+    Date :  19/aug/2022
+    Author : Harsh Ponia
+    Problem : 172. Factorial Trailing Zeroes
+    Difficulty : Medium
+    Description : Given an integer n, return the number of trailing zeroes in n!.
+                  Note that n! = n * (n - 1) * (n - 2) * ... * 3 * 2 * 1.
+    Example 1:
+        Input: n = 3
+        Output: 0
+        Explanation:
+                    3! = 6, no trailing zero.
+ */
 import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Scanner;
