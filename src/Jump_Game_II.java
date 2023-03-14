@@ -2,15 +2,19 @@ import java.util.Scanner;
 
 public class Jump_Game_II {
     public int jump(int[] nums) {
-        int j=nums[0];
-        int n = 0;
-        for(int i =0;i<nums.length;i++){
-            if(nums[i]<=j) {
-                j = nums[i];
-                n = i;
+        int reach=0;
+        int c=0;
+        for (int i = 0; i < nums.length; i++) {
+
+            if(i+nums[i]>reach)
+            {
+                reach = Math.max(reach,i+nums[i]);
+                i=reach-i;
+                c++;
             }
         }
-        return n;
+    return c;
+
     }
 
 

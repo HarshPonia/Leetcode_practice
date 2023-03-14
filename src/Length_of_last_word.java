@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Length_of_last_word
 {
     public int lengthoflast(String s){
@@ -11,6 +13,7 @@ public class Length_of_last_word
         return c;
     }
     public static void main(String[] args) {
+
 
     }
 }
