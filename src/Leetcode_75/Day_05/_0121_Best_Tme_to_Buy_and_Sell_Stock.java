@@ -1,4 +1,4 @@
-package Leetcode_75;
+package Leetcode_75.Day_05;
 
 public class _0121_Best_Tme_to_Buy_and_Sell_Stock {
     public int maxProfit(int[] prices) {
