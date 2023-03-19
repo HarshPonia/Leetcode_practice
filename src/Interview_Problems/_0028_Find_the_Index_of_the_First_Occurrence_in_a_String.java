@@ -4,8 +4,7 @@ public class _0028_Find_the_Index_of_the_First_Occurrence_in_a_String {
     public int strStr(String haystack, String needle) {
         int n1 = haystack.length();
         int n2 = needle.length();
-        if(n1<n2) return -1;
-
+        if(n1<n2) {return -1;};
         for(int i =0;i<=n1-n2;i++){
             int j =0;
             while(j<n2 && haystack.charAt(i+j) == needle.charAt(j)) j++;
