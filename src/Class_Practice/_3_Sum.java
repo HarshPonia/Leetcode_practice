@@ -1,4 +1,4 @@
-package Class_Practice._0015;
+package Class_Practice;
 import java.util.*;
 public class _3_Sum {
     public List<List<Integer>> threeSum(int[] nums) {

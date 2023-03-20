@@ -1,4 +1,4 @@
-package Class_Practice._0015;
+package Class_Practice;
 
 public class _0042_Trapping_Rain_Water {
     public int trap(int[] height) {
