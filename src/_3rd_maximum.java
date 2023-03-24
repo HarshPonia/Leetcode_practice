@@ -1,5 +1,4 @@
-import java.util.Arrays;
-import java.util.Scanner;
+import java.util.*;
 
 public class _3rd_maximum {
 //    public static int max(int[] arr,int n){
@@ -27,13 +26,26 @@ public class _3rd_maximum {
 //        }
 
     public static boolean areAlmostEqual(String s1, String s2) {
-        char ch1[]=s1.toCharArray();
-        char ch2[]=s2.toCharArray();
+        if (s1.equals(s2)) return true;
 
-        if(s1.length() !=s2.length()) return false;
-
-
-
+        HashMap<Character,Character> map= new HashMap<>();
+        for(int i=0;i<s1.length();i++) {
+            if (!map.containsKey(s1.charAt(i)) && s1.charAt(i) != s2.charAt(i)) {
+                map.put(s1.charAt(i), s2.charAt(i));
+            }
+        }
+            if (map.size() > 2) return false;
+            else {
+                Set<Character> e = map.keySet();
+                for (Character x : e) {
+                    if(map.get(x) != x){
+                        if (map.get(map.get(x)) == x) {
+                            return true;
+                        }
+                    }
+                }
+                return false;
+            }
     }
         public static void main(String args[]) {
             String s1="bank";
