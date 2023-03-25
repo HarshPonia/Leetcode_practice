@@ -15,4 +15,5 @@ public class _2089_Find_Target_Indices_After_Sorting_Array {
         }
         return list;
     }
+
 }
