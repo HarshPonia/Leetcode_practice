@@ -1,5 +1,5 @@
 package April_POTD;
-
+import java.util.*;
 public class _0881_Boats_to_Save_People {
     public int numRescueBoats(int[] people, int limit) {
         int count = 0, n = people.length;
@@ -17,5 +17,4 @@ public class _0881_Boats_to_Save_People {
         }
         return count;
     }
-}
 }
